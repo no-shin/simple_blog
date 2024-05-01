@@ -1,9 +1,9 @@
-import { Button, Box, AppBar, Toolbar, Typography, IconButton } from "@mui/material";
+import { Button, Box, AppBar, Toolbar, Typography, Link, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
 export default function Header() {
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1, mb: 3 }}>
       <AppBar position="static">
         <Toolbar>
           <IconButton
@@ -15,10 +15,10 @@ export default function Header() {
           >
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Simple Blog
-          </Typography>
-          <Button color="inherit">Login</Button>
+          <Link href="/" underline="none" color="white" variant="h6" sx={{ flexGrow: 1 }}>
+            {"Simple Blog"}
+          </Link>
+          <Button color="inherit" href="login">Login</Button>
         </Toolbar>
       </AppBar>
     </Box>
