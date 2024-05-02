@@ -1,5 +1,6 @@
-import { Button, Box, AppBar, Toolbar, Typography, Link, IconButton } from "@mui/material";
+import { Button, Box, AppBar, Toolbar, Link as MuiLink, IconButton } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import NextLink from 'next/link';
 
 export default function Header() {
   return (
@@ -15,10 +16,10 @@ export default function Header() {
           >
             <MenuIcon />
           </IconButton>
-          <Link href="/" underline="none" color="white" variant="h6" sx={{ flexGrow: 1 }}>
+          <MuiLink component={NextLink} href="/" underline="none" color="white" variant="h6" sx={{ flexGrow: 1 }}>
             {"Simple Blog"}
-          </Link>
-          <Button color="inherit" href="login">Login</Button>
+          </MuiLink>
+          <Button component={NextLink} color="inherit" href="login">Login</Button>
         </Toolbar>
       </AppBar>
     </Box>
