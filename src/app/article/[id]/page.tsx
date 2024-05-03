@@ -1,5 +1,4 @@
 import Header from "../..//components/header";
-import { useSearchParams } from "next/navigation";
 
 function article({
   params,
