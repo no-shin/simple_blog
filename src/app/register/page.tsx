@@ -7,15 +7,17 @@ import NextLink from "next/link"
 import { use, useState } from "react";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../firebase/firebase';
+import { useRouter } from "next/navigation";
 
 export default function registerForm() {
   const [email, setEmail] = useState<string>('');
   const [password, setPassword] = useState<string>('');
+  const router = useRouter();
   function register() {
     createUserWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        alert({ user })
+        router.push("/login");
       })
       .catch((error) => {
         console.log(error);

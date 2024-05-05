@@ -5,8 +5,8 @@ export type postDb = {
   bodyText: string;
   introText: string;
   url: string;
-  publicTime: Timestamp;
-  unPublicTime: Timestamp;
+  publicTime: Timestamp | null;
+  unPublicTime: Timestamp | null;
   postTime: Timestamp;
   userId: string;
   userName: string;
