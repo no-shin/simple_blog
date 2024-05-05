@@ -10,7 +10,7 @@ type Props = {
 export default function BlogCard({ title, url, statement }: Props) {
   const distination: string = "/articles/" + url;
   return (
-    <Grid item xs={3} sx={{ height: 200 }}>
+    <Grid item xs={3} mb={3} sx={{ height: 200 }}>
       <Card sx={{ height: 200 }}>
         <CardContent sx={{ height: 110 }}>
           <Typography gutterBottom variant='h6' component="div">{title}</Typography>
